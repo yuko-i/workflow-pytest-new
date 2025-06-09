@@ -7,6 +7,8 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
+    env:
+      DB_USER: "postgres"
 
     steps:
       - name: Checkout repository
@@ -22,3 +24,6 @@ jobs:
 
       - name: Run pytest
         run: pytest
+
+      - name: Print DB_USER
+        run: echo "DB_USER -> $DB_USER"
