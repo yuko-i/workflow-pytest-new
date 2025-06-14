@@ -22,3 +22,10 @@ jobs:
 
       - name: Run pytest
         run: pytest
+        
+      - name: Get time
+        id: get_time 
+        run: echo "time=$(date)" >> $GITHUB_OUTPUT
+
+      - name: Print github output 
+        run : echo "1つ前のstepの出力は${{ steps.get_time.outputs.time }}です"
