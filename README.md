@@ -1,4 +1,4 @@
-
+```
 # non-interactive
 ENV DEBIAN_FRONTEND=noninteractive
 
@@ -18,3 +18,4 @@ RUN set -eux; \
 RUN apt-get update && apt-get install -y --no-install-recommends \
     gcsfuse fuse3 \
  && rm -rf /var/lib/apt/lists/*
+```
